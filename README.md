@@ -10,7 +10,7 @@ To create controller create a file with:
 var controller = require('stackers');
 
 var homeController = controller({
-	path : '/'
+    path : '/'
 });
 
 homeController.get('', function(req, res){
@@ -96,9 +96,11 @@ mainController.attach(subController);
 module.exports = mainController;
 ```
 
-If you curl http://localhost:3000/main/sub/test
+If you curl __http://localhost:3000/main/sub/test__
 
-you would get {controller:'yep', subcontroller:'yep'}
+you would get 
+
+    {controller:'yep', subcontroller:'yep'}
 
 
 
