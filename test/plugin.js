@@ -5,11 +5,18 @@ var request = require('supertest'),
 var app = require('./app/app');
 var Controller = require('../lib/controller');
 
+
 var _ = require('underscore');
 
 var basicPlugIn = function(){
 	this.basicPlugInAdded = true;
 };
+
+var basicGlobalPlugIn = function(){
+	this.basicGlobalPlugIn = true;
+};
+
+Controller.use(basicGlobalPlugIn);
 
 var controller = new Controller();
 
@@ -21,6 +28,10 @@ describe('Plug in tests', function () {
 	describe('controller object modifications', function(){
 		it('Should have a basicPlugInAdded property', function(){
 			expect(controller.basicPlugInAdded).equal(true);
+		});
+
+		it('Should have a basicGlobalPlugIn property', function(){
+			expect(controller.basicGlobalPlugIn).equal(true);
 		});
 
 		it('Should have a _jsonFilters array with to items', function(){
