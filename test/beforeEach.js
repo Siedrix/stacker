@@ -42,7 +42,6 @@ homeController.get('/test', function(req, res){
 	res.send(res.data);
 });
 
-console.log( homeController._beforeEach[1].toString() );
 homeController.attach(subController);
 homeController(app);
 

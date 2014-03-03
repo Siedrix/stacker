@@ -5,7 +5,6 @@ var request = require('supertest'),
 var app = require('./app/app');
 var Controller = require('../lib/controller');
 
-
 var _ = require('underscore');
 
 var basicPlugIn = function(){
