@@ -14,7 +14,6 @@ homeController.param('userId', function (userId, done) {
 	if(userId === '1'){
 		done(null, {username: 'test'});
 	}else if(userId === '2'){
-		console.log('Resolving with error');
 		done({error: 'something went wrong'});
 	}else{
 		done();
