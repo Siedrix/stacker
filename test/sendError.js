@@ -71,6 +71,10 @@ app.all('*', Controller.utils.undefinedRouteHandler(Controller) );
 app.listen(3000);
 
 describe('sendError and errorHandler', function () {
+	before(function () {
+		errors = [];
+	});
+
 	describe('Request tests', function () {
 		it('GET /main/404 should return 404 and error Not found', function (done) {
 			request(app).get('/main/404').end(function (req, res) {
@@ -199,5 +203,9 @@ describe('sendError and errorHandler', function () {
 				done();
 			});
 		});
+	});
+
+	after(function () {
+		errors = [];
 	});
 });
