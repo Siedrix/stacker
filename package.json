@@ -1,11 +1,12 @@
 {
   "name": "stackers",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "dependencies": {
     "underscore": "~1.5.2",
     "async": "0.2.9",
     "joi": "~4.6.1",
-    "express": "~4.7.2"
+    "express": "~4.7.2",
+    "body-parser": "~1.5.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
