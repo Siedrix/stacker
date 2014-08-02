@@ -14,6 +14,7 @@ var apiController = new Controller({
 	path : '/'
 });
 
+// Schemas
 var requestSchema = Joi.object().keys({
 	title: Joi.string().required(),
 	description: Joi.string().required()
@@ -26,6 +27,7 @@ var userSchema = Joi.object().keys({
 
 Controller.utils.compileRequestValidator('user', userSchema);
 
+// Validated routes
 apiController.post('/api/v1/list', Controller.utils.validateRequest(requestSchema), function (req, res) {
 	res.send(req.body);
 });
@@ -34,13 +36,14 @@ apiController.post('/api/v1/user', Controller.utils.validateRequest('user'), fun
 	res.send(req.body);
 });
 
-
 apiController.post('/api/v1/no-validation-method', Controller.utils.validateRequest(), function (req, res) {
 	res.send(req.body);
 });
 
+// Mount controller to app
 apiController(app);
 
+// Tests
 describe.only('Api request checker', function () {
 	describe('Request tests with no validator', function () {
 		it('GET /api/v1/no-validation-method should return 500, with error "invalid validate method"', function (done) {
