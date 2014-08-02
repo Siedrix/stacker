@@ -5,51 +5,51 @@ var methodsController = new Controller({
 });
 
 methodsController.get('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 methodsController.get('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+	res.status(200).send({label:req.params.label});
 });
 
 methodsController.post('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 methodsController.post('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+	res.status(200).send({label:req.params.label});
 });
 
 methodsController.put('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 methodsController.put('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+	res.status(200).send({label:req.params.label});
 });
 
-methodsController.del('/',function(req, res){
-	res.send(200, {success:true});
+methodsController.delete('/',function(req, res){
+	res.status(200).send({success:true});
 });
 
-methodsController.del('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+methodsController.delete('/:label',function(req, res){
+	res.status(200).send({label:req.params.label});
 });
 
 methodsController.patch('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 methodsController.patch('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+	res.status(200).send({label:req.params.label});
 });
 
 methodsController.options('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 methodsController.options('/:label',function(req, res){
-	res.send(200, {label:req.params.label});
+	res.status(200).send({label:req.params.label});
 });
 
 module.exports = methodsController;

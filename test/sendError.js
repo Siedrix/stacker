@@ -41,25 +41,25 @@ homeController.get('/random-error-code', function (req, res) {
 
 Controller.errorHandler(404, function (res) {
 	fs.readFile('./test/app/views/404.html', function (err, data) {
-		res.send(404, data);
+		res.status(404).send(data);
 	});
 });
 
 Controller.errorHandler(403, function (res) {
 	fs.readFile('./test/app/views/403.html', function (err, data) {
-		res.send(403, data);
+		res.status(403).send(data);
 	});
 });
 
 Controller.errorHandler(500, function (res) {
 	fs.readFile('./test/app/views/500.html', function (err, data) {
-		res.send(500, data);
+		res.status(500).send(data);
 	});
 });
 
 Controller.errorHandler(function (res, statusCode) {
 	fs.readFile('./test/app/views/generic.html', function (err, data) {
-		res.send(statusCode, data);
+		res.status(statusCode).send(data);
 	});
 });
 

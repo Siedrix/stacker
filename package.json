@@ -3,7 +3,9 @@
   "version": "0.1.5",
   "dependencies": {
     "underscore": "~1.5.2",
-    "async":"0.2.9"
+    "async": "0.2.9",
+    "joi": "~4.6.1",
+    "express": "~4.7.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -13,14 +15,17 @@
     "grunt-plato": "~0.2.1",
     "grunt-githooks": "~0.3.0",
     "request": "~2.30.0",
-    "express": "~3.4.7",
+    "express": "~4.7.2",
     "supertest": "~0.8.2",
     "swig": "~1.2.2"
   },
   "main": "./lib/controller",
-  "keywords": ["controller","express"],
+  "keywords": [
+    "controller",
+    "express"
+  ],
   "repository": {
     "type": "git",
-    "url":"https://github.com/Siedrix/stacker"
+    "url": "https://github.com/Siedrix/stacker"
   }
 }

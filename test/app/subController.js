@@ -5,7 +5,7 @@ var subController = new Controller({
 });
 
 subController.get('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 subController.get('/render/:label',function(req, res){
@@ -13,11 +13,11 @@ subController.get('/render/:label',function(req, res){
 });
 
 subController.post('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 subController.put('/',function(req, res){
-	res.send(200, {success:true});
+	res.status(200).send({success:true});
 });
 
 module.exports = subController;
